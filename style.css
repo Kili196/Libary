@@ -36,6 +36,16 @@ body {
   border-radius: 20px;
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
+  margin: auto;
+}
+
+.book-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 80vw;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .action {
@@ -61,4 +71,32 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header label {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.information-section {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.information-section label {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.information-section p {
+  color: rgb(66, 66, 66);
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(184, 184, 184);
+}
+
+.page-header {
+  font-weight: 500;
 }
