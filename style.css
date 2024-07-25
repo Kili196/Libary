@@ -5,10 +5,21 @@
 
 * {
   font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   background-color: grrgb(209, 209, 209);
+}
+
+.nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);
 }
 
 .main-container {
@@ -17,10 +28,11 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100vw;
+  margin-top: 30px;
 }
 
-.main-container h1 {
-  font-size: 70px;
+.headline {
+  font-size: 40px;
   font-weight: 600;
   background-image: linear-gradient(to left, #553c9a, #b393d3);
   color: transparent;
@@ -32,16 +44,20 @@ body {
   width: 300px;
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 10px;
+  padding: 15px;
   border-radius: 20px;
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
   margin: auto;
+  border-style: solid;
+  border-color: green;
+  border-width: 1px;
 }
 
 .book-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, 350px);
+
   width: 80vw;
   gap: 30px;
   align-items: center;
