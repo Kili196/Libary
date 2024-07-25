@@ -1,5 +1,5 @@
-const card_container = document.getElementsByClassName("book-cards")
-
+const cardContainerCollection = document.getElementsByClassName("book-cards")
+const cardContainer = cardContainerCollection[0];
 
 function Book(title, desc, pages){
     this.title = title;
@@ -23,6 +23,7 @@ book_arr.forEach((e) => {
     div_card.classList.add("book-card")
   
     const header = document.createElement("div");
+    header.classList.add("header")
     const header_label = document.createElement("label");
     header_label.innerHTML = e.title;
     header.appendChild(header_label);
@@ -42,6 +43,45 @@ book_arr.forEach((e) => {
     information_section.appendChild(divider)
     information_section.appendChild(book_desc)
     information_section.appendChild(divider)
+
+
+    /** footer */
+
+    const footer_card = document.createElement("div")
+    footer_card.classList.add("footer-card")
+    const footer_div = document.createElement("div");
+    const label_info = document.createElement("label");
+    label_info.classList.add("page-header");
+    label_info.innerHTML = "Pages: ";
+    const pages = document.createElement("label");
+    pages.innerHTML = e.pages;
+    footer_div.appendChild(label_info);
+    footer_div.appendChild(pages);
+
+    /** action div */
+
+    const action_div = document.createElement("div");
+    action_div.classList.add("action")
+    const button_action = document.createElement("button")
+    button_action.innerHTML = "Delete!"
+    action_div.appendChild(button_action);
+
+
+    footer_card.appendChild(footer_div);
+    footer_card.appendChild(action_div);
+
+
+
+    div_card.appendChild(header);
+    div_card.appendChild(information_section)
+    div_card.appendChild(footer_card)
+
+
+    cardContainer.appendChild(div_card)
+
+
+    console.log(cardContainer)
+
     
   
 })
