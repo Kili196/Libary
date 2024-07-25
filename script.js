@@ -1,6 +1,10 @@
 const cardContainerCollection = document.getElementsByClassName("book-cards")
 const cardContainer = cardContainerCollection[0];
 
+
+
+
+
 function Book(title, desc, pages){
     this.title = title;
     this.desc = desc;
@@ -64,25 +68,33 @@ book_arr.forEach((e) => {
     action_div.classList.add("action")
     const button_action = document.createElement("button")
     button_action.innerHTML = "Delete!"
+    button_action.classList.add("delete_button")
     action_div.appendChild(button_action);
-
-
     footer_card.appendChild(footer_div);
     footer_card.appendChild(action_div);
-
-
-
     div_card.appendChild(header);
     div_card.appendChild(information_section)
     div_card.appendChild(footer_card)
-
-
     cardContainer.appendChild(div_card)
-
-
-    console.log(cardContainer)
-
     
-  
 })
+
+const deleteButton = document.querySelectorAll("button")
+
+deleteButton.forEach(e => {
+    e.addEventListener("click", function() {
+        
+    })
+})
+
+
+console.log(deleteButton)
+
+
+
+
+
+
+
+
 
