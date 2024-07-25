@@ -5,19 +5,20 @@ const cardContainer = cardContainerCollection[0];
 
 
 
-function Book(title, desc, pages){
+function Book(title, desc, pages, read){
     this.title = title;
     this.desc = desc;
-    this.pages = pages; 
+    this.pages = pages;
+    this.read = read; 
 }
 
 
-const book_1 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250);
-const book_2 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250);
-const book_3 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250);
-const book_4 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250);
-const book_5 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250);
-const book_6 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250);
+const book_1 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250, true);
+const book_2 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250, true);
+const book_3 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250, false);
+const book_4 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250, true);
+const book_5 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250, false);
+const book_6 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250, true);
 
 
 const book_arr = [book_1, book_2, book_3, book_4, book_5, book_6]
@@ -25,7 +26,15 @@ const book_arr = [book_1, book_2, book_3, book_4, book_5, book_6]
 book_arr.forEach((e) => {
     const div_card = document.createElement("div");
     div_card.classList.add("book-card")
-  
+    
+    if(e.read === true){
+        div_card.style.border = "2px solid green";
+    }
+    else {
+        div_card.style.border = "2px solid red";
+    }
+
+
     const header = document.createElement("div");
     header.classList.add("header")
     const header_label = document.createElement("label");
