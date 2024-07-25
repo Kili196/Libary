@@ -76,19 +76,17 @@ book_arr.forEach((e) => {
     div_card.appendChild(information_section)
     div_card.appendChild(footer_card)
     cardContainer.appendChild(div_card)
+
+
+    button_action.addEventListener("click", function() {
+        cardContainer.removeChild(div_card)
+    })
+
     
 })
 
-const deleteButton = document.querySelectorAll("button")
-
-deleteButton.forEach(e => {
-    e.addEventListener("click", function() {
-        
-    })
-})
 
 
-console.log(deleteButton)
 
 
 
