@@ -1,5 +1,8 @@
 const cardContainerCollection = document.getElementsByClassName("book-cards")
 const cardContainer = cardContainerCollection[0];
+const addNewBook = document.getElementsByClassName("add_new_book")
+const modalDialog = document.getElementsByClassName("modal")
+const add_book_modal = document.getElementsByClassName("add-book-modal")
 
 
 
@@ -92,12 +95,27 @@ book_arr.forEach((e) => {
     div_card.addEventListener("click", function() {
         div_card.style.border = e.read ? "2px solid green" : "2px solid red";
         e.read = !e.read;
-            
-        
     })
 
 
 })
+
+addNewBook[0].addEventListener("click", () => {
+   
+    modalDialog[0].showModal()
+})
+
+
+add_book_modal[0].addEventListener("click", () => {
+    book_title = document.getElementById("book-title")
+    book_desc = document.getElementById("book-description")
+    book_pages = document.getElementById("book-pages")
+    console.log(book_title)
+
+})
+
+
+
 
 
 

@@ -10,19 +10,41 @@
     <script src="script.js" async defer></script>
   </head>
   <body>
-    <nav class="nav"> 
+    <nav class="nav">
       <div></div>
       <h1 class="headline">Kili`s Libary</h1>
       <div>
-        <button class="add_new_book"> Add new book!</button>
+        <button class="add_new_book">Add new book!</button>
       </div>
     </nav>
     <div class="main-container">
-      <div class="book-cards">
-       
-          
-        </div>
-      </div>
+      <div class="book-cards"></div>
     </div>
+    <dialog class="modal">
+      <form class="input-form" method="dialog">
+        <div class="input-field">
+          <label for="title"> Book-Title:</label>
+          <input type="text" name="title" id="book-title" required />
+        </div>
+        <div class="input-field">
+          <label for="Description"> Description:</label>
+          <input
+            type="text"
+            name="Description"
+            id="book-description"
+            required
+          />
+        </div>
+        <div class="input-field">
+          <label for="pages"> Pages:</label>
+          <input type="text" name="pages" id="book-pages" required />
+        </div>
+        <div class="input-checkbox">
+          <label for="pages"> Read:</label>
+          <input type="checkbox" name="pages" id="book-read" />
+        </div>
+        <button type="submit" class="add-book-modal">Add Book!</button>
+      </form>
+    </dialog>
   </body>
 </html>
