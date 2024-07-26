@@ -90,15 +90,8 @@ book_arr.forEach((e) => {
     })
 
     div_card.addEventListener("click", function() {
-        if (e.read === true) {
-            div_card.style.border = "2px solid green";
-            console.log("green")
-            e.read = false;
-        }
-        else {
-            div_card.style.border = "2px solid red";
-            e.read = true;
-        }
+        div_card.style.border = e.read ? "2px solid green" : "2px solid red";
+        e.read = !e.read;
             
         
     })
