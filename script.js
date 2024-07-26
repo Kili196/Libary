@@ -123,6 +123,13 @@ add_book_modal[0].addEventListener("click", () => {
 })
 
 
+document.querySelectorAll('dialog').forEach(element => 
+    element.addEventListener('mousedown', 
+        event => (event.target === event.currentTarget) && event.currentTarget.close()
+    )
+)
+
+
 
 
 
