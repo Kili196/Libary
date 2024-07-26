@@ -5,11 +5,11 @@ const cardContainer = cardContainerCollection[0];
 
 
 
-function Book(title, desc, pages, read){
+function Book(title, desc, pages, read) {
     this.title = title;
     this.desc = desc;
     this.pages = pages;
-    this.read = read; 
+    this.read = read;
 }
 
 
@@ -26,8 +26,8 @@ const book_arr = [book_1, book_2, book_3, book_4, book_5, book_6]
 book_arr.forEach((e) => {
     const div_card = document.createElement("div");
     div_card.classList.add("book-card")
-    
-    if(e.read === true){
+
+    if (e.read === true) {
         div_card.style.border = "2px solid green";
     }
     else {
@@ -85,11 +85,25 @@ book_arr.forEach((e) => {
     div_card.appendChild(information_section)
     div_card.appendChild(footer_card)
     cardContainer.appendChild(div_card)
-    button_action.addEventListener("click", function() {
+    button_action.addEventListener("click", function () {
         cardContainer.removeChild(div_card)
     })
 
-    
+    div_card.addEventListener("click", function() {
+        if (e.read === true) {
+            div_card.style.border = "2px solid green";
+            console.log("green")
+            e.read = false;
+        }
+        else {
+            div_card.style.border = "2px solid red";
+            e.read = true;
+        }
+            
+        
+    })
+
+
 })
 
 
