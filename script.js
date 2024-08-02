@@ -1,3 +1,15 @@
+class Book {
+    constructor(title, desc, pages, read){
+        this.title = title;
+        this.desc = desc;
+        this.pages = pages;
+        this.read = read;
+    }
+}
+
+
+
+
 const cardContainerCollection = document.getElementsByClassName("book-cards")
 const cardContainer = cardContainerCollection[0];
 const addNewBook = document.getElementsByClassName("add_new_book")
@@ -8,12 +20,7 @@ const add_book_modal = document.getElementsByClassName("add-book-modal")
 
 
 
-function Book(title, desc, pages, read) {
-    this.title = title;
-    this.desc = desc;
-    this.pages = pages;
-    this.read = read;
-}
+
 
 
 const book_1 = new Book("Book_1", "dsadjdsj sdajdsa kjd jdsak jdsa ask dsa kas jkdsadjk asjkd dsakj djadsjk asdkj asjk dasjkd", 250, true);
